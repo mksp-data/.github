@@ -20,10 +20,12 @@ Clone o repositório que deseja trabalhar na sua IDE ou gerenciador de git favor
 
 ## Colaboradores
 
-- Felipe Rocha: [feliperocha-mksp](https://github.com/feliperocha-mksp)
-- E-mail: felipe.rocha@mksp.com.br
-- Engenheiro de Dados/BI e administrador do workspace
+- **Felipe Rocha**  
+  [feliperocha-mksp](https://github.com/feliperocha-mksp)  
+  _E-mail: felipe.rocha@mksp.com.br_  
+  _Engenheiro de Dados/BI e administrador do workspace_
 
-- Matheus Martins: [matheusmartins-mksp](https://github.com/matheusmartins-mksp)
-- E-mail: felipe.rocha@mksp.com.br
-- Analista de BI
+- **Matheus Martins**  
+  [matheusmartins-mksp](https://github.com/matheusmartins-mksp)  
+  _E-mail: matheus.martins@mksp.com.br_  
+  _Analista de BI_
