@@ -26,9 +26,9 @@ Clone o repositório que deseja trabalhar na sua IDE ou gerenciador de Git favor
   _E-mail: felipe.rocha@mksp.com.br_  
   _Engenheiro de Dados/BI e administrador do workspace_
 
-- **Matheus Martins**  
-  [matheusmartins-mksp](https://github.com/matheusmartins-mksp)  
-  _E-mail: matheus.martins@mksp.com.br_  
+- **Vitor Mariano**  
+  [vitormariano-mksp](https://github.com/vitormariano-mksp)  
+  _E-mail: vitor.mariano@mksp.com.br_  
   _Analista de BI_
 
 # Padrões de Arquitetura e Governança de Dados - Marketscape
