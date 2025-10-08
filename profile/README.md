@@ -58,14 +58,14 @@ Utilizamos a **Arquitetura Medalhão** para organizar os nossos dados em zonas l
 
 * **Bronze (Bruta):**  
     * **Propósito:** Armazenar uma cópia exata e imutável dos dados da fonte. Nenhuma transformação de negócio é aplicada aqui, apenas as conversões de tipo de dados necessárias para validar o esquema.  
-    * **Artefato no Fabric:** Tabelas dentro de um **Lakehouse (`lh_`)**.  
-    * **Exemplo de Tabela:** `brz_faturamento`  
-    * **Localização dos Arquivos Originais:** `Files/bronze/{assunto}/nome_do_arquivo.xlsx`
+    * **Artefato no Fabric:** Tabelas no schema `bronze`, ou arquivos dentro da pasta `bronze` dentro de um **Lakehouse (`lh_`)**.  
+    * **Exemplo de Tabela:** `bronze.faturamento`  
+    * **Localização dos Arquivos Originais:** `Files/bronze/{assunto}/{arquivo}`
 
 * **Silver (Prata):**  
     * **Propósito:** Fornecer uma "versão da verdade" limpa, validada, de-duplicada e enriquecida. É aqui que aplicamos regras de qualidade, geramos chaves de hash para unicidade e adicionamos colunas de auditoria.  
-    * **Artefato no Fabric:** Tabelas dentro de um **Lakehouse (`lh_`)**.  
-    * **Exemplo de Tabela:** `slv_faturamento`
+    * **Artefato no Fabric:** Schema `silver` dentro de um **Lakehouse (`lh_`)**.  
+    * **Exemplo de Tabela:** `silver.faturamento`
 
 * **Gold (Ouro):**  
     * **Propósito:** Apresentar os dados num formato otimizado para análise e consumo de BI. As tabelas aqui são geralmente agregadas e modeladas em esquemas estrela (dimensões e fatos).  
@@ -77,20 +77,15 @@ Utilizamos a **Arquitetura Medalhão** para organizar os nossos dados em zonas l
 Utilizamos um padrão consistente para todos os artefatos e colunas para garantir a clareza e a previsibilidade.
 
 * **Formato Geral:** `snake_case` (todas as letras em minúsculas, palavras separadas por underscore `_`)
+* **Nomenclatura de objetos:** `abreviação_cliente_categoria ou propósito_atributos adicionais` (ex: `nb_dentalclean_gold_dim_produtos`)
 
 * **Prefixos de Artefatos no Fabric:**  
     * Workspace: `ws_` (ex: `ws_datacore`)  
     * Lakehouse: `lh_` (ex: `lh_dentalclean`)  
-    * Warehouse: `wh_` (ex: `wh_dentalclean`)  
+    * Notebooks: `wh_` (ex: `nb_dentalclean`)  
     * Dataflow Gen2: `df_` (ex: `df_brz_slv_faturamento`)  
     * Data Pipeline: `pl_` (ex: `pl_orquestra_faturamento_dentalclean`)  
     * Relatório Power BI: `pbi_` (ex: `pbi_relatorio_vendas`)
-
-* **Prefixos de Tabelas (dentro do Lakehouse/Warehouse):**  
-    * Camada Bronze: `brz_` (ex: `brz_faturamento`)  
-    * Camada Silver: `slv_` (ex: `slv_faturamento`)  
-    * Camada Gold (Dimensão): `gld_dim_` (ex: `gld_dim_produto`)  
-    * Camada Gold (Fato): `gld_fact_` (ex: `gld_fact_vendas`)
 
 * **Colunas:**  
     * Utilizar `snake_case` (ex: `faturamento_sem_st`, `data_carga`)  
